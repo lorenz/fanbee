@@ -1,0 +1,125 @@
+cflags = -I../sdk/source/ti/boards/CC1352P_2_LAUNCHXL -I../sdk/source/ti/zstack/boards/cc13x2_cc26x2 -I../syscfg -I../sdk/source/ti/common/cc26xx/crc -I../sdk/source/ti/zstack/ota -I../sdk/source/ti/ti154stack/common/oad/CC13X2_CC26X2R1_LAUNCHXL -I../sdk/source/ti/common/cc26xx/flash_interface/external -I../sdk/source/ti/zstack/ota -I../sdk/source/ti/ti154stack/common/oad/CC13X2_CC26X2R1_LAUNCHXL -I../sdk/source/ti/common/cc26xx/flash_interface -I../sdk/source/ti/common/cc26xx/crc -I../sdk/source/ti -Oz -std=gnu9x -munaligned-access -fshort-enums -fcommon -funsigned-char -mlittle-endian -fdiagnostics-show-option -ffunction-sections -g -DTIMAC_ROM_PATCH -DCUI_DISABLE -DMAX_STATUS_LINES=10 -DZSTACK_SECURITY -DBOARD_DISPLAY_USE_UART -DFREQ_2_4G -DOSAL_PORT2TIRTOS -DOSAL_PORT2TIRTOS_OSALMAP -DZDO_API_BASIC -DTC_LINKKEY_JOIN -DNV_RESTORE -DNV_INIT -DFEATURE_NON_BEACON_MODE -DZCL_STANDALONE -DMAX_DEVICE_TABLE_ENTRIES=50 -I../sdk/source/ti/zstack/startup -I../sdk/source/ti/common/nv -I../sdk/source/ti/ti154stack/services/saddr -I../sdk/source/ti/ti154stack/services/sdata -I../sdk/source/ti/zstack/apps/sampleapp -I../sdk/source/ti/common/cui -I../sdk/source/ti/zstack/stack/ui -I../sdk/source/ti/ti154stack/common/util -I../sdk/source/ti/common/time -I../sdk/source/ti/zstack/stack/api -I../sdk/source/ti/zstack/stack/gp -I../sdk/source/ti/zstack/stack/bdb/touchlinkapp -I../sdk/source/ti/zstack/stack/af -I../sdk/source/ti/zstack/stack/bdb -I../sdk/source/ti/ti154stack/common/boards -I../sdk/source/ti/zstack/stack/gp -I../sdk/source/ti/ti154stack/hal/crypto -I../sdk/source/ti/ti154stack/hal/platform -I../sdk/source/ti/ti154stack/hal/rf -I../sdk/source/ti/ti154stack/high_level -I../sdk/source/ti/ti154stack/low_level/cc13xx -I../sdk/source/ti/ti154stack/inc -I../sdk/source/ti/zstack/stack/nwk -I../sdk/source/ti/ti154stack/common/osal_port/osal_port_posix -I../sdk/source/ti/ti154stack/common/osal_port -I../sdk/source/ti/zstack/osal -I../sdk/source/ti/ti154stack/rom -I../sdk/source/ti/zstack/stack/sec -I../sdk/source/ti/zstack/stack/sys -I../sdk/source/ti/zstack/stack/zdo -I../sdk/source/ti/zstack/zmac -I../sdk/source/ti/zstack/zmac/f8w -I../sdk/source/ti/zstack/stack/api -I../toolchain/include -I../sdk/source/ti/zstack/mt -I../sdk/source/ti/zstack/osal -I../sdk/source/ti/ti154stack/services/saddr -I../sdk/source/ti/ti154stack/services/sdata -I../sdk/source/ti/ti154stack/hal/crypto -I../sdk/source/ti/ti154stack/hal/platform -I../sdk/source/ti/ti154stack/hal/rf -I../sdk/source/ti/zstack/stack/af -I../sdk/source/ti/zstack/stack/bdb -I../sdk/source/ti/zstack/stack/bdb/touchlinkapp -I../sdk/source/ti/zstack/stack/gp -I../sdk/source/ti/zstack/stack/api -I../sdk/source/ti/zstack/stack/nwk -I../sdk/source/ti/zstack/stack/sec -I../sdk/source/ti/zstack/stack/sys -I../sdk/source/ti/zstack/stack/zcl -I../sdk/source/ti/zstack/stack/zdo -I../sdk/source/ti/zstack/zmac -I../sdk/source/ti/zstack/zmac/f8w -I../sdk/source/ti/zstack/stack/ui -I../sdk/source/ti/common/cui -I../sdk/source/ti/ti154stack -I../sdk/source/ti/ti154stack/fh -I../sdk/source/ti/ti154stack/high_level -I../sdk/source/ti/ti154stack/inc -I../sdk/source/ti/ti154stack/inc/cc13xx -I../sdk/source/ti/ti154stack/low_level/cc13xx -I../sdk/source/ti/ti154stack/tracer -I../sdk/source/ti/ti154stack/rom -I../sdk/source/ti/ti154stack/common/heapmgr -I../sdk/source/ti/ti154stack/common/osal_port -I../sdk/source/ti/ti154stack/common/osal_port/osal_port_posix -I../sdk/source/ti/common/nv -I../sdk/source/ti/zstack/util -I../sdk/source/ti/ti154stack/common/util -I../sdk/source/ti/zstack/config -I../sdk/source/ti/zstack/startup -I../sdk/source/ti/ti154stack/common/api/inc -I../sdk/source/ti/common/time -I../sdk/source/ti/zstack/apps/sampleapp @../sdk/source/ti/zstack/config/f8wrouter.opts -I../sdk/source/ti/zstack/stack/zcl -DDEVICE_FAMILY=cc13x0 -DDeviceFamily_CC13X2 -DNO_CC1312R1_SUPPORT -DTIMAC_ROM_IMAGE_BUILD -DNVOCMP_NVPAGES=2 -DCONFIG_PA_TYPE=APIMAC_HIGH_PA -DCC1352P_2 -I../sdk/source/ti/ti154stack/common/boards -I../sdk/source -I../sdk/source/ti/devices/cc13x2_cc26x2 -I../sdk/source/ti/devices/cc13x2_cc26x2/inc -I../sdk/source/ti/devices/cc13x2_cc26x2/driverlib -I../sdk/source/ti/posix/ticlang -DTIRTOS7_SUPPORT -DHEAPMGR_CONFIG=0x80 -DHEAPMGR_SIZE=0x00 -I../sdk/kernel/tirtos7/packages -I../sdk/source/ti/posix/ticlang -gdwarf-3 -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16
+
+ldflags_pre = -Wl,-i"../sdk/source" -Wl,-i"../sdk/kernel/tirtos7/packages" -Wl,-i"../syscfg" -Wl,-i"../toolchain/lib" -Wl,--reread_libs -Wl,--define=NVOCMP_NVPAGES=2 -Wl,--diag_wrap=off -Wl,--display_error_number -Wl,--warn_sections -Wl,--xml_link_info=fanbee_linkInfo.xml -Wl,--rom_model -Wl,--unused_section_elimination=on
+
+ldflags_post = -Wl,-l../syscfg/ti_utils_build_linker.cmd.genlibs -Wl,-lti_utils_build_linker.cmd.genlibs -Wl,-l../sdk/source/ti/ti154stack/lib/rom/ticlang/timac_rom_PG2_0_rom_api_linker.cmd -Wl,-l../sdk/source/ti/devices/cc13x2_cc26x2/driverlib/bin/ticlang/driverlib.lib -Wl,-llibc.a
+
+rule cc
+  deps = gcc
+  depfile = $out.d
+  command = ../toolchain/bin/tiarmclang -MD -MF $out.d $cflags -c $in -o $out
+
+rule link
+  command = ../toolchain/bin/tiarmclang $ldflags_pre $in -o $out -Wl,-l../sdk/source/ti/zstack/boards/cc13x2_cc26x2/cc13x2_cc26x2_tirtos7_ticlang.cmd $ldflags_post
+
+rule link_oad
+  command = ../toolchain/bin/tiarmclang $ldflags_pre $in -o $out -Wl,-l../sdk/source/ti/zstack/boards/cc13x2_cc26x2/cc13x2_cc26x2_ota_tirtos7_ticlang.cmd $ldflags_post
+
+rule hex
+  command = ../toolchain/bin/tiarmobjcopy $in --output-target ihex $out
+
+rule rawbin
+  command = ../toolchain/bin/tiarmobjcopy $in --output-target binary $out
+
+rule oad_image
+  command = python3 ../sdk/tools/common/oad/oad_image_tool.py --verbose ccs . 7 -hex1 $in -k ../sdk/tools/common/oad/private.pem -o $out
+
+rule zota_image
+  command = ../sdk/tools/zstack/zigbee_ota_image_converter/zOTAfileGen $in ./ BEBE 2652 00000001
+
+build main.o: cc ../sdk/source/ti/zstack/startup/main.c
+build zstackstartup.o: cc ../sdk/source/ti/zstack/startup/zstackstartup.c
+build crc.o: cc ../sdk/source/ti/common/nv/crc.c
+build nvocmp.o: cc ../sdk/source/ti/common/nv/nvocmp.c
+build mac_util.o: cc ../sdk/source/ti/ti154stack/common/util/mac_util.c
+build util_timer.o: cc ../sdk/source/ti/ti154stack/common/util/util_timer.c
+build utc_clock.o: cc ../sdk/source/ti/common/time/utc_clock.c
+build af.o: cc ../sdk/source/ti/zstack/stack/af/af.c
+build bdb.o: cc ../sdk/source/ti/zstack/stack/bdb/bdb.c
+build bdb_finding_and_binding.o: cc ../sdk/source/ti/zstack/stack/bdb/bdb_finding_and_binding.c
+build bdb_reporting.o: cc ../sdk/source/ti/zstack/stack/bdb/bdb_reporting.c
+build bdb_touchlink.o: cc ../sdk/source/ti/zstack/stack/bdb/bdb_touchlink.c
+build bdb_touchlink_initiator.o: cc ../sdk/source/ti/zstack/stack/bdb/bdb_touchlink_initiator.c
+build bdb_touchlink_target.o: cc ../sdk/source/ti/zstack/stack/bdb/bdb_touchlink_target.c
+build bdb_tl_commissioning.o: cc ../sdk/source/ti/zstack/stack/bdb/touchlinkapp/bdb_tl_commissioning.c
+build touchlink_initiator_app.o: cc ../sdk/source/ti/zstack/stack/bdb/touchlinkapp/touchlink_initiator_app.c
+build touchlink_target_app.o: cc ../sdk/source/ti/zstack/stack/bdb/touchlinkapp/touchlink_target_app.c
+build gp_common.o: cc ../sdk/source/ti/zstack/stack/gp/gp_common.c
+build gp_proxy_table.o: cc ../sdk/source/ti/zstack/stack/gp/gp_proxy_table.c
+build gp_proxy.o: cc ../sdk/source/ti/zstack/stack/gp/gp_proxy.c
+build gp_bit_fields.o: cc ../sdk/source/ti/zstack/stack/gp/gp_bit_fields.c
+build dbg.o: cc ../sdk/source/ti/ti154stack/tracer/dbg.c
+build mac_cfg.o: cc ../sdk/source/ti/ti154stack/high_level/mac_cfg.c
+build mac_activity.o: cc ../sdk/source/ti/ti154stack/low_level/cc13xx/mac_activity.c
+build binding_table.o: cc ../sdk/source/ti/zstack/stack/nwk/binding_table.c
+build nwk_globals.o: cc ../sdk/source/ti/zstack/stack/nwk/nwk_globals.c
+build stub_aps.o: cc ../sdk/source/ti/zstack/stack/nwk/stub_aps.c
+build osal_nv.o: cc ../sdk/source/ti/zstack/osal/osal_nv.c
+build osal_port.o: cc ../sdk/source/ti/ti154stack/common/osal_port/osal_port_posix/osal_port.c
+build osal_port_timers.o: cc ../sdk/source/ti/ti154stack/common/osal_port/osal_port_posix/osal_port_timers.c
+build zstackapi.o: cc ../sdk/source/ti/zstack/stack/api/zstackapi.c
+build zstacktask.o: cc ../sdk/source/ti/zstack/stack/api/zstacktask.c
+build zdiags.o: cc ../sdk/source/ti/zstack/stack/sys/zdiags.c
+build zglobals.o: cc ../sdk/source/ti/zstack/stack/sys/zglobals.c
+build zd_app.o: cc ../sdk/source/ti/zstack/stack/zdo/zd_app.c
+build zd_config.o: cc ../sdk/source/ti/zstack/stack/zdo/zd_config.c
+build zd_nwk_mgr.o: cc ../sdk/source/ti/zstack/stack/zdo/zd_nwk_mgr.c
+build zd_object.o: cc ../sdk/source/ti/zstack/stack/zdo/zd_object.c
+build zd_profile.o: cc ../sdk/source/ti/zstack/stack/zdo/zd_profile.c
+build zd_sec_mgr.o: cc ../sdk/source/ti/zstack/stack/zdo/zd_sec_mgr.c
+build zmac.o: cc ../sdk/source/ti/zstack/zmac/f8w/zmac.c
+build zmac_cb.o: cc ../sdk/source/ti/zstack/zmac/f8w/zmac_cb.c
+build zcl_ota.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_ota.c
+build ota_client.o: cc ../sdk/source/ti/zstack/ota/ota_client.c
+build oad_switch_agama.o: cc ../sdk/source/ti/zstack/ota/oad_switch_agama.c
+build oad_image_header_app.o: cc ../sdk/source/ti/zstack/ota/oad_image_header_app.c
+build flash_interface_int_rtos_NVS.o: cc ../sdk/source/ti/common/cc26xx/flash_interface/internal/flash_interface_int_rtos_NVS.c
+build crc32.o: cc ../sdk/source/ti/common/cc26xx/crc/crc32.c
+build zcl.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl.c
+build zcl_port.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_port.c
+build zcl_general.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_general.c
+build zcl_green_power.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_green_power.c
+build zcl_ha.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_ha.c
+build zcl_diagnostic.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_diagnostic.c
+build zcl_closures.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_closures.c
+build zcl_appliance_control.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_appliance_control.c
+build zcl_appliance_events_alerts.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_appliance_events_alerts.c
+build zcl_appliance_statistics.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_appliance_statistics.c
+build zcl_cc.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_cc.c
+build zcl_cert_data.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_cert_data.c
+build zcl_electrical_measurement.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_electrical_measurement.c
+build zcl_hvac.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_hvac.c
+build zcl_retail.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_retail.c
+build zcl_telecommunication.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_telecommunication.c
+build zcl_lighting.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_lighting.c
+build zcl_ll.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_ll.c
+build zcl_ms.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_ms.c
+build zcl_partition.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_partition.c
+build zcl_pi.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_pi.c
+build zcl_poll_control.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_poll_control.c
+build zcl_power_profile.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_power_profile.c
+build zcl_se.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_se.c
+build zcl_ss.o: cc ../sdk/source/ti/zstack/stack/zcl/zcl_ss.c
+build mac_user_config.o: cc ../sdk/source/ti/ti154stack/common/boards/mac_user_config.c
+build mac_settings.o: cc ../sdk/source/ti/ti154stack/low_level/cc13xx/mac_settings.c
+
+build ti_devices_config.o: cc ../syscfg/ti_devices_config.c
+build ti_drivers_config.o: cc ../syscfg/ti_drivers_config.c
+build ti_radio_config.o: cc ../syscfg/ti_radio_config.c
+build ti_sysbios_config.o: cc ../syscfg/ti_sysbios_config.c
+build ti_zstack_config.o: cc ../syscfg/ti_zstack_config.c
+build zcl_config.o: cc ../syscfg/zcl_config.c
+
+build fanbee.o: cc ../fanbee.c
+
+build fanbee.elf: link ti_devices_config.o ti_radio_config.o ti_zstack_config.o ti_drivers_config.o ti_sysbios_config.o zcl_config.o main.o zstackstartup.o crc.o nvocmp.o mac_util.o util_timer.o utc_clock.o af.o bdb.o bdb_finding_and_binding.o bdb_reporting.o bdb_touchlink.o bdb_touchlink_initiator.o bdb_touchlink_target.o bdb_tl_commissioning.o touchlink_initiator_app.o touchlink_target_app.o gp_common.o gp_proxy_table.o gp_proxy.o gp_bit_fields.o dbg.o mac_cfg.o mac_activity.o binding_table.o nwk_globals.o stub_aps.o osal_nv.o osal_port.o osal_port_timers.o zstackapi.o zstacktask.o zdiags.o zglobals.o zd_app.o zd_config.o zd_nwk_mgr.o zd_object.o zd_profile.o zd_sec_mgr.o zmac.o zmac_cb.o flash_interface_int_rtos_NVS.o crc32.o zcl.o zcl_port.o zcl_general.o zcl_green_power.o zcl_ha.o zcl_diagnostic.o zcl_closures.o zcl_appliance_control.o zcl_appliance_events_alerts.o zcl_appliance_statistics.o zcl_cc.o zcl_cert_data.o zcl_electrical_measurement.o zcl_hvac.o zcl_retail.o zcl_telecommunication.o zcl_lighting.o zcl_ll.o zcl_ms.o zcl_partition.o zcl_pi.o zcl_poll_control.o zcl_power_profile.o zcl_se.o zcl_ss.o mac_user_config.o mac_settings.o fanbee.o
+
+build fanbee_oad.elf: link_oad ti_devices_config.o ti_radio_config.o ti_zstack_config.o ti_drivers_config.o ti_sysbios_config.o zcl_config.o main.o zstackstartup.o crc.o nvocmp.o mac_util.o util_timer.o utc_clock.o af.o bdb.o bdb_finding_and_binding.o bdb_reporting.o bdb_touchlink.o bdb_touchlink_initiator.o bdb_touchlink_target.o bdb_tl_commissioning.o touchlink_initiator_app.o touchlink_target_app.o gp_common.o gp_proxy_table.o gp_proxy.o gp_bit_fields.o dbg.o mac_cfg.o mac_activity.o binding_table.o nwk_globals.o stub_aps.o osal_nv.o osal_port.o osal_port_timers.o zstackapi.o zstacktask.o zdiags.o zglobals.o zd_app.o zd_config.o zd_nwk_mgr.o zd_object.o zd_profile.o zd_sec_mgr.o zmac.o zmac_cb.o zcl_ota.o ota_client.o oad_switch_agama.o oad_image_header_app.o flash_interface_int_rtos_NVS.o crc32.o zcl.o zcl_port.o zcl_general.o zcl_green_power.o zcl_ha.o zcl_diagnostic.o zcl_closures.o zcl_appliance_control.o zcl_appliance_events_alerts.o zcl_appliance_statistics.o zcl_cc.o zcl_cert_data.o zcl_electrical_measurement.o zcl_hvac.o zcl_retail.o zcl_telecommunication.o zcl_lighting.o zcl_ll.o zcl_ms.o zcl_partition.o zcl_pi.o zcl_poll_control.o zcl_power_profile.o zcl_se.o zcl_ss.o mac_user_config.o mac_settings.o fanbee.o
+
+build fanbee.hex: hex fanbee.elf
+
+build fanbee_oad.hex: hex fanbee_oad.elf
+
+build fanbee_oad | fanbee_oad.bin: oad_image fanbee_oad.hex
+
+build fanbee.ota: zota_image fanbee_oad.bin
