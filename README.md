@@ -1,6 +1,8 @@
 # FanBee :honeybee:
 *A Zigbee-controlled 140mm fan with electronically-controlled valve*
 
+![Product Picture](render.png)
+
 Skip to the Build Guide if you want to know how to build one.
 
 # Introduction
